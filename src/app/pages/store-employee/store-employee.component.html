@@ -1,0 +1,30 @@
+<nz-table #basicTable [nzData]="(employee$ | async) || []" [nzLoading]="(loading$ | async)">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th nzWidth="50px"></th>
+            <th nzWidth="50px"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of basicTable.data">
+            <td>{{data.name}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.gender}}</td>
+            <td>{{data.address.city}} - {{data.address.state}}</td>
+            <td>
+                <a>
+                    <i nz-icon nzType="edit" nzTheme="fill"></i>
+                </a>
+            </td>
+            <td>
+                <a (click)="deleteById(data.id)">
+                    <i nz-icon nzType="delete" nzTheme="fill" style="color: red;"></i>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</nz-table>
