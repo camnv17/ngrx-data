@@ -19,6 +19,8 @@ export class StoreEmployeeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.store.setState({ entities: [], loading: false });
+
     this.store.getAll$();
   }
 

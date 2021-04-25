@@ -1,16 +1,6 @@
 {
   "employee": [
     {
-      "id": 10,
-      "name": "Thompson Hays",
-      "gender": "male",
-      "age": 38,
-      "address": {
-        "state": "Nevada",
-        "city": "Kipp"
-      }
-    },
-    {
       "id": 11,
       "name": "Hallie Mack",
       "gender": "female",
